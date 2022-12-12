@@ -4,6 +4,10 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils";
 
+import { Button, FormInput } from "../../export/exporter";
+
+import "./sign-up-form.styles.scss";
+
 const defaultFormFields = {
   displayName: "",
   email: "",
@@ -17,10 +21,14 @@ const SignUpForm = () => {
 
   console.log(formFields);
 
+  const resetFormFields = () => {
+    setFormFields(defaultFormFields);
+  };
+
   const logWithEmailAndPassword = async (event) => {
     event.preventDefault();
 
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       alert("Password do not match");
       return;
     }
@@ -32,7 +40,7 @@ const SignUpForm = () => {
       );
 
       await createUserDocumentFromAuth(user, { displayName });
-      console.log(user);
+      resetFormFields();
     } catch (error) {
       console.log(error.message);
     }
@@ -44,42 +52,46 @@ const SignUpForm = () => {
   };
 
   return (
-    <div>
-      <h1>Sign up with your email and password</h1>
+    <div className="sign-up-container">
+      <h2>Don't have a any account ?</h2>
+      <span>Sign up with your email and password</span>
       <form action="" onSubmit={logWithEmailAndPassword}>
-        <label htmlFor="">Display Your Name</label>
-        <input
+        <FormInput
+          label="Display Your Name"
           type="text"
           name="displayName"
           value={displayName}
           onChange={changeHandler}
           required
         />
-        <label htmlFor="">Email</label>
-        <input
+        <FormInput
+          label="Email"
           type="email"
           name="email"
           value={email}
           onChange={changeHandler}
           required
         />
-        <label htmlFor="">Password</label>
-        <input
+
+        <FormInput
+          label="Password"
           type="password"
           name="password"
           value={password}
           onChange={changeHandler}
           required
         />
-        <label htmlFor="">Confirm Password</label>
-        <input
-          type="text"
+
+        <FormInput
+          label="Confirm Password"
+          type="password"
           name="confirmPassword"
           value={confirmPassword}
           onChange={changeHandler}
           required
         />
-        <button type="submit">Submit</button>
+
+        <Button type="submit">Submit</Button>
       </form>
     </div>
   );

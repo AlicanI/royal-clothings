@@ -1,9 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Authentication, Home, Navigation } from "./export/exporter";
-
-const Shop = () => {
-  return <h1>I am the shop page</h1>;
-};
+import { Authentication, Home, Navigation, Shop } from "./export/exporter";
 
 const App = () => {
   return (

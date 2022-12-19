@@ -14,6 +14,9 @@ import Shop from "../routes/shop/shop.component";
 import ProductCard from "../components/product-card/product-card.component";
 import CartIcon from "../components/cart-icon/cart-icon.component";
 import CartDropdown from "../components/cart-dropdown/cart-dropdown.component";
+import CartItem from "../components/cart-item/cart-item.component";
+import CheckoutPage from "../routes/check-out-page/checkout-page.component";
+import CheckoutItem from "../components/checkout-item/checkout-item.component";
 import { UserContext } from "../contexts/user.context";
 import { ProductsContext } from "../contexts/products.context";
 import { CartContext } from "../contexts/cart.context";
@@ -34,6 +37,9 @@ export {
   ProductCard,
   CartIcon,
   CartDropdown,
+  CartItem,
+  CheckoutPage,
+  CheckoutItem,
   Shop,
   UserContext,
   ProductsContext,

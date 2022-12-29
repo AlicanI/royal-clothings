@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import {
   UserProvider,
-  ProductsProvider,
+  CategoriesProvider,
   CartProvider,
 } from "./export/exporter";
 
@@ -16,11 +16,11 @@ render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <ProductsProvider>
+        <CategoriesProvider>
           <CartProvider>
             <App />
           </CartProvider>
-        </ProductsProvider>
+        </CategoriesProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>,

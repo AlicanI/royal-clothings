@@ -5,7 +5,7 @@ import Button from "../components/button/button.component";
 import CategoryItem from "../components/category-item/category-item.component";
 import Directory from "../components/directory/directory.component";
 import { UserProvider } from "../contexts/user.context";
-import { ProductsProvider } from "../contexts/products.context";
+import { CategoriesProvider } from "../contexts/categories.context";
 import { CartProvider } from "../contexts/cart.context";
 import FormInput from "../components/form-input/form-input.component";
 import SignInForm from "../components/sign-in-form/sign-in-form.component";
@@ -18,12 +18,12 @@ import CartItem from "../components/cart-item/cart-item.component";
 import CheckoutPage from "../routes/check-out-page/checkout-page.component";
 import CheckoutItem from "../components/checkout-item/checkout-item.component";
 import { UserContext } from "../contexts/user.context";
-import { ProductsContext } from "../contexts/products.context";
+import { CategoriesContext } from "../contexts/categories.context";
 import { CartContext } from "../contexts/cart.context";
 
 export {
   UserProvider,
-  ProductsProvider,
+  CategoriesProvider,
   CartProvider,
   Home,
   Authentication,
@@ -42,6 +42,6 @@ export {
   CheckoutItem,
   Shop,
   UserContext,
-  ProductsContext,
+  CategoriesContext,
   CartContext,
 };

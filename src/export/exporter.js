@@ -2,7 +2,10 @@ import Home from "../routes/home/home.component";
 import Authentication from "../routes/authentication/authentication.conponent";
 import Navigation from "../routes/navigation/navigation.component";
 import Button from "../components/button/button.component";
-import CategoryItem from "../components/category-item/category-item.component";
+import Category from "../routes/category/category.component";
+import DirectoryItem from "../components/directory-item/directory-item.component";
+import CategoryPreview from "../components/category-preview/category-preview.component";
+import CategoriesPreview from "../routes/categories-preview/categories-preview.component";
 import Directory from "../components/directory/directory.component";
 import { UserProvider } from "../contexts/user.context";
 import { CategoriesProvider } from "../contexts/categories.context";
@@ -29,7 +32,10 @@ export {
   Authentication,
   Navigation,
   Button,
-  CategoryItem,
+  Category,
+  DirectoryItem,
+  CategoryPreview,
+  CategoriesPreview,
   Directory,
   FormInput,
   SignInForm,
